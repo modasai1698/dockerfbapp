@@ -5,6 +5,8 @@ services:
     image: modasai/dockerfbapp
     ports:
       - "3306:3306"
+    deploy:
+      replicas: 2
     networks:
       - "my_network"
 
@@ -12,6 +14,8 @@ services:
     image: modasai/dockerfbdb
     ports:
       - "1111:8080"
+    deploy:
+      replicas: 2
     networks:
       - "my_network"
     depends_on:
