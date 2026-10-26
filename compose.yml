@@ -2,12 +2,12 @@
 version: "3.9"
 services:
  devopsdb:
-   image: dbimage
+   image: modasai/dockerfbapp
    ports:
      - "3306:3306"
 
  application:
-   image: appimage
+   image: modasai/dockerfbdb
    ports:
      - "1111:8080"
    depends_on:
